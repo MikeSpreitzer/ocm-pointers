@@ -17,6 +17,9 @@ import (
 	placementruleV1 "open-cluster-management.io/multicloud-operators-subscription/pkg/apis/apps/placementrule/v1"
 	appsV1 "open-cluster-management.io/multicloud-operators-subscription/pkg/apis/apps/v1"
 	appsV1a1 "open-cluster-management.io/multicloud-operators-subscription/pkg/apis/apps/v1alpha1"
+
+	stolcertpolv1 "open-cluster-management.io/cert-policy-controller/api/v1"
+	stoliampolv1 "open-cluster-management.io/iam-policy-controller/api/v1"
 )
 
 ////////////////////////////////////////////////////////////////
@@ -134,8 +137,23 @@ type OCMPolicyV1b1_PolicySet = propolicyV1b1.PolicySet
 type OCMPolicyV1b1_PolicyAutomation = propolicyV1b1.PolicyAutomation
 
 // PlacementBinding in policy.open-cluster-management.io/v1
-// Binds a slice of (Policy or PolicySet) with a Placement or PlacementRule
+// Binds a slice of (Policy or PolicySet) with a Placement or PlacementRule.
+// Also in github.com/stolostron/governance-policy-propagator/api/v1
 type OCMPolicyV1_PlacementBinding = propolicyV1.PlacementBinding
 
+//// Some particular types of policy ////
+
+// Some mentioned in https://github.com/stolostron/governance-policy-framework/blob/main/README.md
+
 // ConfigurationPolicy in policy.open-cluster-management.io/v1
+// Generic policy about kubish API objects.
+// There is also a copy in github.com/stolostron/config-policy-controller/api/v1
 type OCMPolicyV1_ConfigurationPolicy = policyV1.ConfigurationPolicy
+
+// CertificatePolicy in policy.open-cluster-management.io/v1
+// Policies about validity dates of certs in Secret objects
+type StolCertPolicyV1_CertificatePolicy = stolcertpolv1.CertificatePolicy
+
+// IamPolicy in policy.open-cluster-management.io/v1
+// Policies about usage of ClusterRole objects
+type StolIAMPolicyV1_IamPolicy = stoliampolv1.IamPolicy

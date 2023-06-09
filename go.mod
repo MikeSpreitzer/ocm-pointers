@@ -4,8 +4,10 @@ go 1.19
 
 require (
 	open-cluster-management.io/api v0.11.0
+	open-cluster-management.io/cert-policy-controller v0.86.0
 	open-cluster-management.io/config-policy-controller v0.11.0
 	open-cluster-management.io/governance-policy-propagator v0.11.0
+	open-cluster-management.io/iam-policy-controller v0.86.0
 	open-cluster-management.io/multicloud-operators-channel v0.11.0
 	open-cluster-management.io/multicloud-operators-subscription v0.11.0
 )
@@ -35,4 +37,6 @@ replace (
 	k8s.io/api => k8s.io/api v0.26.4
 	k8s.io/apimachinery => k8s.io/apimachinery v0.26.4
 	k8s.io/client-go => k8s.io/client-go v0.26.4
+	open-cluster-management.io/cert-policy-controller => github.com/stolostron/cert-policy-controller v0.0.0-20230509165757-f0f4763c2a45
+	open-cluster-management.io/iam-policy-controller => github.com/stolostron/iam-policy-controller v0.0.0-20230509200505-c33971547b94
 )

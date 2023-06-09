@@ -54,6 +54,10 @@ github.com/prometheus/client_model v0.4.0 h1:5lQXD3cAg1OXBf4Wq03gTrXHeaV0TQvGfUo
 github.com/prometheus/common v0.43.0 h1:iq+BVjvYLei5f27wiuNiB1DN6DYQkp1c8Bx0Vykh5us=
 github.com/prometheus/procfs v0.9.0 h1:wzCHvIvM5SxWqYvwgVL7yJY8Lz3PKn49KQtpgMYJfhI=
 github.com/spf13/pflag v1.0.5 h1:iy+VFUOCP1a+8yFto/drg2CJ5u0yRoB7fZw3DKv/JXA=
+github.com/stolostron/cert-policy-controller v0.0.0-20230509165757-f0f4763c2a45 h1:Dur3YDBCIfKDnlJcTk0o9mQGtxum1LfMVTKcV0zdFdk=
+github.com/stolostron/cert-policy-controller v0.0.0-20230509165757-f0f4763c2a45/go.mod h1:PsmXMjkbSFt6eT9AtmTrUJTzDX6FFjLfL0vECZEW2Kw=
+github.com/stolostron/iam-policy-controller v0.0.0-20230509200505-c33971547b94 h1:Lofh3wi4av9RCNV6UFRbePJ5Nvpq0tJLPqHzFC+hMwg=
+github.com/stolostron/iam-policy-controller v0.0.0-20230509200505-c33971547b94/go.mod h1:PKHHGDP6SDlXAAQspV4HXs6KSFG/fWMbMmqnyFRPj4A=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UVUgZn+9EI=
 github.com/stretchr/testify v1.8.1 h1:w7B6lhMri9wdJUVmEZPGGhZzrYTPvgJArz7wNPgYKsk=
