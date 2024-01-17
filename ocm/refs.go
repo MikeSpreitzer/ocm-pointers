@@ -8,6 +8,7 @@ import (
 	clusterV1b2 "open-cluster-management.io/api/cluster/v1beta2"
 	operatorV1 "open-cluster-management.io/api/operator/v1"
 	workV1 "open-cluster-management.io/api/work/v1"
+	workV1a1 "open-cluster-management.io/api/work/v1alpha1"
 	policyV1 "open-cluster-management.io/config-policy-controller/api/v1"
 	propolicyV1 "open-cluster-management.io/governance-policy-propagator/api/v1"
 	propolicyV1b1 "open-cluster-management.io/governance-policy-propagator/api/v1beta1"
@@ -117,8 +118,13 @@ type OCMWorkV1_AppliedManifestWork = workV1.AppliedManifestWork
 // ManifestWork represents a manifests workload that hub wants to deploy on the managed cluster.
 // A manifest workload is defined as a set of Kubernetes resources.
 // A Manifest work exists in the hub's mailbox namespace for the managed cluster.
-// There is nothing that binds a destination-agnostic ManifestWork with a Placement.
+// There is nothing in v1 that binds a destination-agnostic ManifestWork with a Placement
+// but see ManifestWorkReplicaSet.
 type OCMWorkV1_ManifestWork = workV1.ManifestWork
+
+// ManifestWorkReplicaSet in work.open-cluster-management.io/v1alpha1
+// ManifestWorkReplicaSet extends ManifestWork with a reference to a Placement.
+type OCMWorkV1a1_ManifestWorkReplicaSet = workV1a1.ManifestWorkReplicaSet
 
 // AnsibleJob in tower.ansible.com/v1alpha1
 type AnsibleTowerV1a1_AnsibleJob = ansibleV1a1.AnsibleJob
